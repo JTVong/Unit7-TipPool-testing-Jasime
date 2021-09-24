@@ -14,5 +14,9 @@ describe('Servers test (with setup and tear-down) ', () => {
     serverName.value = " ";
     expect(allServerName.length).toEqual(0);
   }
+  afterEach(()=>{
+    allServerName = [];
+    serverName.value = "";
+  })
 
 });
