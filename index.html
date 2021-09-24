@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/jasmine-core/lib/jasmine-core/jasmine.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Tip pool</title>
+  </head>
+  <body>
+    <h1>Tip Pool</h1>
+    <div id="info">
+      <div id="payment-info">
+        <form id="payment-form">
+          <h2>Input payment info</h2>
+          <label for="bill-amount">Bill Amount</label>
+          <span
+            >$ <input type="number" min="0" step="0.01" id="bill-amount" autocomplete="off" required
+          /></span>
+          <label for="tip-amount">Tip Amount</label>
+          <span
+            >$ <input type="number" min="0" step="0.01" id="tip-amount" autocomplete="off"
+          /></span>
+          <button>submit</button>
+        </form>
+        <table id="bill-summary">
+          <tr>
+            <th>Bill amount</th>
+            <th>Tip amout</th>
+            <th>Tip percent</th>
+          </tr>
+        </table>
+      </div>
+
+      <div id="server-info">
+        <form id="server-form">
+          <h2>Input server info</h2>
+          <label for="server-name">Server Name</label>
+          <input type="text" minlength="1" id="server-name" autocomplete="off" required />
+          <h3>Please enter server name</h3>
+          <button>submit</button>
+        </form>
+        <div id="server-earning">
+          <table id="server-earning-summary">
+            <tr>
+              <th>Server Name</th>
+              <th>Earning</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div id="summary">
+      <h2>Shift summary</h2>
+      <table id="shift-summary">
+        <tr>
+          <th>Bill total</th>
+          <th>Tip total</th>
+          <th>Tip percent avg</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <script src="https://unpkg.com/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+    <script src="https://unpkg.com/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+    <script src="https://unpkg.com/jasmine-core/lib/jasmine-core/boot.js"></script>
+    <script src="payments.js"></script>
+    <script src="servers.js"></script>
+
+    <script src="helper.js"></script>
+    <script src="servers.test.js"></script>
+  </body>
+</html>
